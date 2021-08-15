@@ -1,0 +1,168 @@
+/* 
+GUI Assignment: Implementing a Bit of  Scrabble with Drag-and-Drop
+Name: Nicholas Aswani, UMass Lowell Computer Science, nicholas_aswani@student.uml.edu
+Aug 7th, 2021
+*/
+/* the page styling features */
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background:rgb(160, 151, 184);
+   
+}
+/*  this div holds the board and the rack; css features styles the content*/
+.container{
+    padding: 20px;
+    text-align: center;
+    background-color:aliceblue;
+    margin:auto;
+    border: 3px solid darkblue;
+    width: 920px;
+    align-items: center;
+}
+/* css styling for the header  */
+.container h1 {
+    margin-top: -10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 2em;
+    color: darkmagenta;
+    /* background-color: cyan; */
+    /* border: 2px solid black; */
+    padding:20px;
+    /* font-weight: bold; */
+}
+
+/* this css styles the board */
+.board { 
+    padding: 10px;
+    justify-content: center;
+    /* margin: 0 auto; */
+    margin: 30px auto;
+    width: 800px;
+    height: 100px;
+    border: 2px solid darkblue;
+    align-items: center;
+    display: flex;
+    background-color:darkslateblue;
+    justify-content: center;
+
+}
+/* this css styles the rack*/
+/* utilized background-image and size to embed the tile holder image and its size*/
+.tilesRack{
+    height: 100px;
+    width: 100%;
+    justify-content: center;
+    background: darkslateblue;
+    border: 2px solid aqua;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    background-image: url(./img/scrabble-tile-holder.png);
+    background-size: 100%;
+}
+/* this css styles the score-keeper class 
+   which holds the ids score and remaining_tiles
+   */
+.score_keeper {
+    width: 70%;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 auto;
+    display: flex;
+
+}
+
+/* the score id styling */
+#score {
+    text-align: center;
+    color: darkorchid;
+    font-size: medium;
+    text-transform: uppercase;
+    width: 820px;
+    margin: 0 auto 35px;
+    text-shadow:darkmagenta;
+    
+}
+/* tiles left id styling */
+#remaining_tiles {
+    text-align: center;
+    color: darkorchid;
+    font-size: medium;
+    text-transform: uppercase;
+    width: 820px;
+    margin: 0 auto 35px;
+    text-shadow: darkmagenta;
+}
+/* css styling for a tile 
+ including setting its image */
+.tile {
+    height: 100%;
+    width: 114px;
+    background-image: url(./img/Scrabble_Tile_Blank.jpg); /* each tiles background is a tile */
+    background-repeat: no-repeat; 
+    background-size: cover; /* to make tiles sit next to each other */
+    display: inline-block;
+    margin: 2px;
+}
+/* the tile_rack class styling */
+.tile_rack {
+    height: 100%;
+    width: 114px;
+    cursor: pointer; 
+    background-image: url(./img/Scrabble_Tile_Blank.jpg); /* each tiles background is a tile */
+    display: inline-flex;
+    background-size: cover; /* to make tiles sit next to each other */
+    align-items: center;
+    margin: 2px;
+    font-size: 1em;
+    position: relative;
+    justify-content: center;
+}
+
+.tile_rack .tile_value {
+    font-size: .5em;
+    position: absolute;
+    bottom: 3px;
+    right: 5px;
+}
+
+/* double word styling */
+.double-word {
+    background: linear-gradient(pink,pink), url(./img/Scrabble_Tile_Blank.jpg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    text-align: center;
+    color: #140101;
+    position: relative;
+  }
+
+.double-letter {
+    background: lightpink, url(../img/tile.jpg);
+  }
+  
+/* button styling*/
+  button {
+      height: 20px;
+      width: 90px;
+      /* position: absolute; */
+      right: 0;
+      background:lavenderblush;
+      color:darkmagenta;
+      border: solid darkorchid;
+      cursor: pointer;
+  }
+  /* high-light the button that the cursor is on*/
+  button:hover{
+      box-shadow: 2px 2px 2px 2px red;
+  }
+

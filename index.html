@@ -1,0 +1,42 @@
+<!-- GUI Assignment: Implementing a Bit of  Scrabble with Drag-and-Drop -->
+<!-- Name: Nicholas Aswani, UMass Lowell Computer Science, nicholas_aswani@student.uml.edu -->
+<!-- Aug 7th, 2021 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>SCRABBLE</title>
+</head>
+<body>
+    <div class="container">
+        <h1>SCRABBLE</h1>
+
+        <!--This div is for the scores tab and remaining tiles tab-->
+        <div class="score_keeper">
+            <div id="score"></div>
+            <div id="remaining_tiles"></div>
+        </div>
+        
+        <!--This div holds the board for the tiles-->
+        <div class="board"></div>
+
+        <!--This div will hold the tiles rack-->
+        <div class="tilesRack"></div>
+
+      <div class="clickable"> <!--a div class for buttons -->
+        <button id="clear">New Tiles</button>
+        <button id= "new_game"> New Game </button>
+        <button id= "submit">Submit</button>
+      </div>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="scrabble.js"></script>
+</body>
+</html>
